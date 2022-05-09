@@ -284,18 +284,22 @@ def random_music():
     path = "C:\\\\Users\\\\Dr.Wael\\\\PycharmProjects\\\\The talking project\\\\musicfiles"
     files = os.listdir(path)
     d = random.choice(files)
-    music_player(d)
-    speak(f'playing {d}')
+    music_player(f"{path}//{d}")
+    print(d)
+    t.sleep(5)
     music_play_or_stop()
 
 
 def music_play_or_stop():
-    x = input('type pause to pause')
-    if x == 'pause':
-        musical.pause()
-        f = input('type play to continue')
-        if f == 'play':
-            musical.play()
+    while True:
+        x = input('type pause to pause')
+        if x == 'pause':
+            musical.pause()
+            f = input('type play to continue')
+            if f == 'play':
+                musical.play()
+        if x=='quit':
+            break
 
 
 def playmusic():
@@ -466,7 +470,7 @@ if __name__ == '__main__':
             elif 'close' in text:
                 speak('closing')
                 close()
-            elif 'school' in text:
+            elif 'School' in text or 'school' in text:
                 school_scheduler()
             elif 'lyrics' in text or 'song' and 'called' in text:
                 get_song_by_lyrics()
@@ -531,6 +535,10 @@ if __name__ == '__main__':
             elif "time" in text:
                 time = today_date.strftime("%X")
                 speak(time)
+            elif 'hour' in text:
+                hour = today_date.strftime("%I")
+                minutes = today_date.strftime("%M")
+                speak(hour + minutes)
 
             elif "name" in text:
                 speak("hi my name is jarvis")
