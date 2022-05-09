@@ -9,7 +9,7 @@ if __name__ == '__main__':
 import random
 import shutil
 from urllib.request import Request, urlopen
-print('hellow github')
+print('i love github')
 import docx
 import pyttsx3
 import speech_recognition
