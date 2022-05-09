@@ -457,6 +457,7 @@ if __name__ == '__main__':
             text = get_audio(printorno=True)
             if len(text) == 0:
                 speak("couldn't get input")
+                break
             if "hello" in text or 'good morning' in text:
                 speak("hello, how are you?")
                 continue
@@ -532,10 +533,7 @@ if __name__ == '__main__':
                 day = today_date.strftime("%A")
                 speak(day)
                 continue
-            elif "time" in text:
-                time = today_date.strftime("%X")
-                speak(time)
-            elif 'hour' in text:
+            elif 'time' in text:
                 hour = today_date.strftime("%I")
                 minutes = today_date.strftime("%M")
                 speak(hour + minutes)
