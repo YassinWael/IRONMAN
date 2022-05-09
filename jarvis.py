@@ -1,15 +1,8 @@
 import os
-from plyer import notification
 
-if __name__ == '__main__':
-    notification.notify(title='J.A.R.V.I.S ',
-                        message='jarvis is up and running',
-                        app_icon="C:\\Users\\Dr.Wael\\PycharmProjects\\The talking project\\icon.ico",
-                        timeout=10)
 import random
 import shutil
 from urllib.request import Request, urlopen
-print('i love github')
 import docx
 import pyttsx3
 import speech_recognition
@@ -23,6 +16,12 @@ import webbrowser
 import clipboard
 from bs4 import BeautifulSoup
 from docx.shared import Pt
+from plyer import notification
+if __name__ == '__main__':
+    notification.notify(title='J.A.R.V.I.S ',
+                        message='jarvis is up and running',
+                        app_icon="C:\\Users\\Dr.Wael\\PycharmProjects\\The talking project\\icon.ico",
+                        timeout=10)
 
 today_date = datetime.now()
 try:
@@ -42,8 +41,7 @@ def speak(s):  # the function that speaks
     engine.runAndWait()
 
 
-if __name__ == '__main__':
-    speak('jarvis up and running sir')
+
 
 
 def get_audio(printorno=True):  # function that recognizes speech
