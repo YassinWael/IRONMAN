@@ -544,6 +544,7 @@ if __name__ == '__main__':
                 if i == 3:
                     speak('program crashed')
                     stopped = True
+                    break
                 speak('Say that again,please')
 
         while stopped is True:
